@@ -30,7 +30,7 @@ add_library(
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${INC_DIR})
 
-if(LINK_MINHOOK_PUBLIC)
+if(EXPOSE_MINHOOK)
     target_link_libraries(${PROJECT_NAME} PUBLIC minhook)
 else()
     target_link_libraries(${PROJECT_NAME} PRIVATE minhook)
