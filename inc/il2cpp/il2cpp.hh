@@ -29,13 +29,15 @@ namespace il2cpp
     inline uintptr_t(*class_get_properties)(uintptr_t klass, void** iter);
     inline uintptr_t(*class_get_parent)(uintptr_t klass);
 
-    inline int(*method_get_param_count)(uintptr_t method);
-    inline uintptr_t(*method_get_return_type)(uintptr_t method);
-    inline uintptr_t(*method_get_param)(uintptr_t method, int ind);
     inline const char*(*method_get_name)(uintptr_t method);
+    inline uintptr_t(*method_get_return_type)(uintptr_t method);
+    inline int(*method_get_param_count)(uintptr_t method);
+    inline uintptr_t(*method_get_param)(uintptr_t method, int ind);
+    inline const char*(*method_get_param_name)(uintptr_t method, int ind);
 
     inline const char*(*field_get_name)(uintptr_t field);
     inline uintptr_t(*field_get_type)(uintptr_t field);
+    inline size_t(*field_get_offset)(uintptr_t field);
 
     inline const char*(*property_get_name)(uintptr_t property);
     inline uintptr_t(*property_get_get_method)(uintptr_t property);
@@ -70,13 +72,16 @@ namespace il2cpp
         {"il2cpp_class_get_properties", (void**)&il2cpp::class_get_properties},
         {"il2cpp_class_get_parent", (void**)&il2cpp::class_get_parent},
 
-        {"il2cpp_method_get_param_count", (void**)&il2cpp::method_get_param_count},
-        {"il2cpp_method_get_return_type", (void**)&il2cpp::method_get_return_type},
-        {"il2cpp_method_get_param", (void**)&il2cpp::method_get_param},
         {"il2cpp_method_get_name", (void**)&il2cpp::method_get_name},
+        {"il2cpp_method_get_return_type", (void**)&il2cpp::method_get_return_type},
+        {"il2cpp_method_get_param_count", (void**)&il2cpp::method_get_param_count},
+        {"il2cpp_method_get_param", (void**)&il2cpp::method_get_param},
+        {"il2cpp_method_get_param_name", (void**)&il2cpp::method_get_param_name},
+        
 
         {"il2cpp_field_get_name", (void**)&il2cpp::field_get_name},
         {"il2cpp_field_get_type", (void**)&il2cpp::field_get_type},
+        {"il2cpp_field_get_offset", (void**)&il2cpp::field_get_offset},
 
         {"il2cpp_property_get_name", (void**)&il2cpp::property_get_name},
         {"il2cpp_property_get_get_method", (void**)&il2cpp::property_get_get_method},
