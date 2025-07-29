@@ -21,7 +21,7 @@ endif()
 add_library(
     ${PROJECT_NAME}
 
-    ${SRC_DIR}/debug/klass.cc
+    ${SRC_DIR}/debug/dump_class.cc
 
     ${SRC_DIR}/assemblies.cc
     ${SRC_DIR}/il2cpp.cc

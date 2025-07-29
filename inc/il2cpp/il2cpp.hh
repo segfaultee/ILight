@@ -3,7 +3,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "debug/klass.hh"
+#include "debug/dump_class.hh"
 
 #include "assemblies.hh"
 #include "state.hh"
